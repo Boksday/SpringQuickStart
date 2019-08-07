@@ -8,8 +8,8 @@ import java.sql.ResultSet;
 public class JDBCUtil {
   public static Connection getConnection() {
     try {
-      Class.forName("oracle.jdbc.driver.OracleDriver");
-      return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","bituser","1004");
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      return DriverManager.getConnection("jdbc:mysql://localhost:3306/spring?useUnicode=true&characterEncoding=utf8&verifyServerCertificate=false&useSSL=false&serverTimezone=UTC","root","1004");
     }catch(Exception e) {
       e.printStackTrace();
     }
