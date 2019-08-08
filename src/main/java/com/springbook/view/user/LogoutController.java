@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-public class LogoutContoller implements Controller{
+public class LogoutController implements Controller{
 
   @Override
   public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
