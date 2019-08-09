@@ -11,13 +11,14 @@
     <h1>글 목록</h1>
     <h3>테스트님 환영합니다...<a href="logout.do">Log-out</a></h3>
     
-    <form action="getBoardList.jsp" method="post">
+    <form action="getBoardList.do" method="post">
       <table border="1" cellpadding="0" cellspacing="0" width="700">
         <tr>
           <td align="right">
             <select name="searchCondition">
-             <option value="TITLE" selected>제목</option>
-             <option value="CONTENT">내용</option>
+             <c:forEach items="${conditionMap}" var="option">
+              <option value="${option.value}">${option.key}
+             </c:forEach>
             </select>
             <input name="searchKeyword" type="text"/>
             <input type="submit" value="검색"/>
